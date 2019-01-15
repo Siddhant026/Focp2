@@ -9,16 +9,16 @@ class Arr2
 			System.out.println(a[i]);
 		}
 	}
-	public static int sum(int a[])
+	public static void sum(int a[])
 	{
 		int sum=0;
 		for(int i=0;i<5;i++)
 		{
 			sum+=a[i];
 		}
-		return sum;
+		System.out.println(sum);
 	}
-	public static int max(int a[])
+	public static void max(int a[])
 	{
 		int temp;
 		for (int i = 0; i < 5; i++) 
@@ -33,9 +33,9 @@ class Arr2
                 }
             }
         }
-        return a[4];
+        System.out.println(a[4]);
 	}
-	public static int min(int a[])
+	public static void min(int a[])
 	{
 		int temp;
 		for (int i = 0; i < 5; i++) 
@@ -50,9 +50,9 @@ class Arr2
                 }
             }
         }
-        return a[0];
+        System.out.println(a[0]);
 	}
-	public static int SecMax(int a[])
+	public static void SecMax(int a[])
 	{
 		int temp;
 		for (int i = 0; i < 5; i++) 
@@ -67,28 +67,28 @@ class Arr2
                 }
             }
         }
-        return a[3];
+        System.out.println(a[3]);
 	}
-	public static int AltSum(int a[])
+	public static void AltSum(int a[])
 	{
-		int sum;
-		for(int i=0;i<5;i+2)
+		int sum=0,i;
+		for(i=0;i<5;i+=2)
 		{
 			sum+=a[i];
 		}
-		return sum;
+		System.out.println(sum);
 	}
-	public static int evenSum(int a[])
+	public static void evenCount(int a[])
 	{
-		int sum;
+		int count=0;
 		for(int i=0;i<5;i++)
 		{
 			if (a[i]%2==0)
-				sum+=a[i];
+				count++;
 		}
-		return sum;
+		System.out.println(count);
 	}
-	public static int Occ(int a[])
+	public static void Occ(int a[])
 	{
 		int c=0,ch;
 		System.out.println("emter the number u want to find");
@@ -97,23 +97,55 @@ class Arr2
 		for (int i=0;i<5;i++)
 		{
 			if (ch==a[i])
-				c++
+				c++;
 		}
-		return ch
+		System.out.println(c);
 	}
 	public static void main(String args[])
 	{
 		Scanner in = new Scanner(System.in);
 		int[] a = new int[5];
 		boolean ch=false;
-		int n;
-		
+		int n,i;
+		System.out.println("Enter the array of 5 elements");
+		for (i=0;i<5;i++)
+		{
+			a[i]=in.nextInt();
+		}
+		System.out.println("Enter 1 for Displaying Elements\nEnter 2 for Sum of elements\nEnter 3 for largest number in array\nEnter 4 for smallest element in array\nEnter 5 for second largest number in the array\nEnter 6 for seconf largest element\nEnter 7 for count of even numbers in array\nEnter 8 for occurrence of a given number and its frequency");
 		do
 		{
 			n=in.nextInt();
 			switch(n)
 			{
-				case 
+				case 1:
+				print(a);
+				break;
+				case 2:
+				sum(a);
+				break;
+				case 3:
+				max(a);
+				break;
+				case 4:
+				min(a);
+				break;
+				case 5:
+				SecMax(a);
+				break;
+				case 6:
+				AltSum(a);
+				break;
+				case 7:
+				evenCount(a);
+				break;
+				case 8:
+				Occ(a);
+				break;
+				default :
+				System.out.println("Wrong Input\nEnter again");
+				ch=true;
+				break;
 			}
 		}while(ch);
 	}
