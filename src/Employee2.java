@@ -20,31 +20,31 @@ class Employee
 	}
 	void Display()
 	{
-		System.out.println(name+"\t"+year+"\t"+address);
+		System.out.println(name+"\t"+year+"\t\t\t"+address);
 	}
 }
-class Employee2
+public class Employee2
 {
 	public static void main(String args[])
 	{
-		Scanner in = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		String n,a;
 		double y,s;
 		int c,i;
 		System.out.println("Enter the number of employees");
-		c=in.nextInt();
+		c=input.nextInt();
 		Employee e[] = new Employee[c];
 		for (i=0;i<c;i++)
 		{
 			System.out.println("Enter name, year of joining, address and salary");
-		    n=in.nextLine();
+		    n=input.next();
 		    System.out.println("name entered");
-		    y=in.nextDouble();
-		    a=in.nextLine();
-		    s=in.nextDouble();
+		    y=input.nextDouble();
+		    a=input.next();
+		    s=input.nextDouble();
 		    e[i]= new Employee(n,a,y,s);
 		}
-		System.out.println("Name\tYear of joining\tAddress");
+		System.out.println("Name\tYear of joining\t\tAddress");
 		for (i=0;i<c;i++)
 		{
 			e[i].Display();
