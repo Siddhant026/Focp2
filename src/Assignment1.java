@@ -1,7 +1,5 @@
 import java.util.*;
 
-//int h;
-
 class Date
 {
 	int day, month, year;
@@ -12,19 +10,6 @@ class Date
 	    this.month=m;
 	    this.year=y;
 	}
-
-	/*int getd()
-	{
-		return day;
-	}
-	int getm()
-	{
-		return month;
-	}
-	int gety()
-	{
-		return year;
-	}*/
 
 	void DisplayDate()
 	{
@@ -46,27 +31,6 @@ class Address
 		this.pinCode=p;
 	}
 
-	/*String getl1()
-	{
-		return line1;
-	}
-	String getl2()
-	{
-		return line2;
-	}
-	String getc()
-	{
-		return city;
-	}
-	String gets()
-	{
-		return state;
-	}
-	int getp()
-	{
-		return pinCode;
-	}*/
-
 	void DisplayAddress()
 	{
 		System.out.print(line1+" "+line2+" "+city+" "+state+" "+pinCode+" ");
@@ -85,23 +49,6 @@ class Qualification
 		this.institute=i;
 		this.cgpa=cgpa;
 	}
-
-	/*String getq()
-	{
-		return qualName;
-	}
-	String getu()
-	{
-		return university;
-	}
-	String geti()
-	{
-		return institute;
-	}
-	double getcgpa()
-	{
-		return cgpa;
-	}*/
 
 	void DisplayQualification()
 	{
@@ -132,39 +79,6 @@ class Project
 		this.responsibilities[i]=input.next();
 	}
 	}
-
-	/*String getn()
-	{
-		return name;
-	}
-	String getr()
-	{
-		return role;
-	}
-	int getds()
-	{
-		return startDate.getd();
-	}
-	int getms()
-	{
-		return startDate.getm();
-	}
-	int getys()
-	{
-		return startDate.gety();
-	}
-	int getdl()
-	{
-		return endDate.getd();
-	}
-	int getml()
-	{
-		return endDate.getm();
-	}
-	int getyl()
-	{
-		return endDate.gety();
-	}*/
 
 	void DisplayProject(int z)
 	{
@@ -216,7 +130,7 @@ class Student
 	    double cgpa;
 	    for(j=0;j<x;j++)
 	    {
-	    	System.out.println("enter qualName, university, institute, cgpa of number "+(j+1)+" Qualification");
+	    	System.out.println("enter Qualification Name, university, institute, cgpa of number "+(j+1)+" Qualification");
 	    	q=input.next();
 	    	u=input.next();
 	    	i=input.next();
@@ -229,7 +143,7 @@ class Student
 	    int ds, ms, ys, dl, ml, yl, z;
 	    for(j=0;j<b;j++)
 	    {
-	    	System.out.println("enter name, role, no. of responsibilities, startday, startmonth, startyear, finishday, finishmonth, finishyear of project number "+(j+1));
+	    	System.out.println("enter Project name, role, no. of responsibilities, startday, startmonth, startyear, finishday, finishmonth, finishyear of project number "+(j+1));
 	    	n=input.next();
 	    	r=input.next();
 	    	z=input.nextInt();
@@ -277,17 +191,17 @@ class Assignment1
 		Student[] student = new Student[n];
 		for (i=0;i<n;i++)
 		{
-			System.out.println("Enter fname");
+			System.out.println("Enter first name");
 			fn=input.next();
-			System.out.println("Enter lname");
+			System.out.println("Enter last name");
 			ln=input.next();
 			System.out.println("Enter email");
 			em=input.next();
-			System.out.println("Enter cnumber");
+			System.out.println("Enter contact number");
 			cn=input.next();
-			System.out.println("Enter l1");
+			System.out.println("Enter Address\nEnter line 1");
 			l1=input.next();
-			System.out.println("Enter l2");
+			System.out.println("Enter line 2");
 			l2=input.next();
 			System.out.println("Enter city");
 			c=input.next();
@@ -295,11 +209,11 @@ class Assignment1
 			s=input.next();
 			System.out.println("Enter pincode");
 			p=input.nextInt();
-			System.out.println("Enter date");
+			System.out.println("Enter DOB");
 			d=input.nextInt();
 			m=input.nextInt();
 			y=input.nextInt();
-			System.out.println("Enter number of skills");
+			System.out.println("Enter number of Skills");
 			x=input.nextInt();
 			System.out.println("Enter number of Qualifications");
 			v=input.nextInt();
