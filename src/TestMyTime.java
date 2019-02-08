@@ -61,22 +61,36 @@ class MyTime
 
 	public MyTime(int s, int m, int h)
 	{
-		TestSecond.test(s);
-		TestMinute.test(m);
-		TestHour.test(h);
-		this.second=s;
-		this.minute=m;
-		this.hour=h;
+		try
+		{
+			TestSecond.test(s);
+		    TestMinute.test(m);
+		    TestHour.test(h);
+		    this.second=s;
+		    this.minute=m;
+		    this.hour=h;
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
 	}
 
 	public void setTime(int s, int m, int h)
 	{
-		TestSecond.test(s);
-		TestMinute.test(m);
-		TestHour.test(h);
-		this.second=s;
-		this.minute=m;
-		this.hour=h;
+		try
+		{
+			TestSecond.test(s);
+		    TestMinute.test(m);
+		    TestHour.test(h);
+		    this.second=s;
+		    this.minute=m;
+		    this.hour=h;
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
 	}
 
 	public int getSecond()
@@ -96,20 +110,41 @@ class MyTime
 
 	public void setSecond(int s)
 	{
-		TestSecond.test(s);
-		this.second=s;
+		try
+		{
+			TestSecond.test(s);
+		    this.second=s;
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
 	}
 
 	public void setMinute(int m)
 	{
-		TestMinute.test(m);
-		this.minute=m;
+		try
+		{
+			TestMinute.test(m);
+		    this.minute=m;
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
 	}
 
 	public void setHour(int h)
 	{
-		TestHour.test(h);
-		this.hour=h;
+		try
+		{
+			TestHour.test(h);
+		    this.hour=h;
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
 	}
 
 	public void Display()
